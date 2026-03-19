@@ -5,6 +5,14 @@ import './Cart.css';
 
 function Cart() {
   const { cart, removeFromCart, updateQuantity } = useBook();
+  
+  const totalItems = ()=>{
+    let sum = 0;
+    for(let i = 0; i<cart.length; i++){
+        sum += cart[i].quantity;
+    }
+    return sum;
+  }
 
   if (cart.length === 0) {
     return (
@@ -21,7 +29,7 @@ function Cart() {
   return (
     <div className="cart-page">
       <div className="cart-header">
-        <h1>Shopping Cart ({cart.length})</h1>
+        <h1>Shopping Cart ({totalItems()})</h1>
         <Link to="/" className="back-home-link">← Continue Shopping</Link>
       </div>
       
