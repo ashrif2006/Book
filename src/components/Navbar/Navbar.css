@@ -2,45 +2,90 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 50px;
-  background-color: #2c3e50;
-  color: white;
+  padding: 1.25rem 5%;
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-bottom: 1px solid var(--glass-border);
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  box-shadow: var(--glass-shadow);
 }
 
 .navbar-logo h2 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #fff 0%, var(--text-secondary) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.5px;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .navbar-links a {
-  color: white;
+  color: var(--text-secondary);
   text-decoration: none;
-  margin-left: 20px;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .navbar-links a:hover {
-  color: #3498db;
+  color: var(--text-primary);
 }
 
-.navbar-search input {
-  padding: 8px 15px;
-  border-radius: 20px;
-  border: none;
-  width: 300px;
-  outline: none;
+.cart-link {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
 }
 
-.navbar-search button {
-  padding: 8px 15px;
-  border-radius: 20px;
-  border: none;
-  margin-left: -40px; 
-  background: #3498db;
-  color: white;
-  cursor: pointer;
+.cart-count {
+  color: var(--accent-primary);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 5%;
+  }
+
+  .navbar-logo h2 {
+    font-size: 1.3rem;
+  }
+
+  .navbar-links {
+    gap: 1.2rem;
+  }
+
+  .navbar-links a {
+    font-size: 0.9rem;
+  }
+
+  .cart-link {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .navbar-links {
+    width: 100%;
+    justify-content: space-around;
+  }
 }

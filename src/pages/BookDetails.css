@@ -139,13 +139,18 @@
   }
 
   .details-container img {
-    max-width: 300px;
+    max-width: 280px;
     margin: 0 auto;
+  }
+
+  .title-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
   }
 
   .info-side h1 {
     font-size: 2.2rem;
-    text-align: center;
   }
 
   .meta-info {
@@ -157,10 +162,22 @@
 @media (max-width: 480px) {
   .details-page {
     padding: 0 1rem;
+    margin-top: 1rem;
   }
   
+  .details-container {
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+
   .info-side h1 {
     font-size: 1.8rem;
+  }
+
+  .details-add-cart-btn {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
   }
 }
 
@@ -218,11 +235,4 @@
 .details-add-cart-btn:active {
   transform: translateY(0);
 }
-
-@media (max-width: 968px) {
-  .title-section {
-    flex-direction: column;
-    text-align: center;
-    gap: 1.5rem;
-  }
-}
+
