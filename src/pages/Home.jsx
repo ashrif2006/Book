@@ -17,7 +17,6 @@ const Home = () => {
 
   return (
     <>
-        <Navbar />
         <SearchBar />
         {loading ? (
             <div className="loader-container">
