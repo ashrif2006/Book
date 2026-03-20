@@ -9,7 +9,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <Link to="/" style={{ textDecoration: 'none' }}>
           <h2>📚 BookStore</h2>
         </Link>
       </div>
