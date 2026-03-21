@@ -98,7 +98,7 @@
 
 .description-container p {
   margin-bottom: 1rem;
-  text-align: left; /* Override global p text-align: center if needed */
+  text-align: left;
 }
 
 .meta-info {
@@ -235,4 +235,4 @@
 .details-add-cart-btn:active {
   transform: translateY(0);
 }
-
+
